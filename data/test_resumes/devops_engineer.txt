@@ -1,0 +1,67 @@
+ALEX THOMPSON
+DevOps Engineer
+Email: alex.thompson@cloudtech.com | Phone: (555) 456-7890
+GitHub: github.com/alexdevops | LinkedIn: linkedin.com/in/alexthompson
+
+PROFESSIONAL OVERVIEW
+DevOps Engineer with 7 years of experience in cloud infrastructure, automation, and CI/CD pipeline development. Expertise in containerization, orchestration, and monitoring solutions. Strong background in both Linux and Windows environments with a focus on scalability and reliability.
+
+TECHNICAL EXPERTISE
+Cloud Platforms: AWS, Google Cloud Platform, Microsoft Azure
+Containerization: Docker, Kubernetes, OpenShift, Docker Swarm
+CI/CD Tools: Jenkins, GitLab CI, GitHub Actions, CircleCI, Azure DevOps
+Infrastructure as Code: Terraform, CloudFormation, Ansible, Pulumi
+Monitoring & Logging: Prometheus, Grafana, ELK Stack, Splunk, Datadog
+Programming: Python, Bash, PowerShell, Go, YAML
+Operating Systems: Linux (Ubuntu, RHEL, CentOS), Windows Server
+Version Control: Git, SVN, Mercurial
+Security: HashiCorp Vault, AWS IAM, Security Groups, RBAC
+
+WORK EXPERIENCE
+
+Senior DevOps Engineer | CloudFirst Technologies | April 2021 - Present
+• Architected and implemented multi-cloud infrastructure serving 500K+ users
+• Reduced deployment time by 80% through automated CI/CD pipelines
+• Managed Kubernetes clusters with 200+ microservices across multiple environments
+• Implemented monitoring solutions reducing mean time to recovery (MTTR) by 60%
+• Led migration of monolithic applications to microservices architecture
+• Automated infrastructure provisioning using Terraform reducing manual effort by 90%
+• Established disaster recovery procedures and backup strategies
+
+DevOps Engineer | ScaleUp Solutions | January 2019 - April 2021
+• Built and maintained Jenkins pipelines for automated testing and deployment
+• Implemented Docker containerization for 20+ applications
+• Managed AWS infrastructure including EC2, RDS, S3, and Lambda
+• Created monitoring dashboards using Prometheus and Grafana
+• Automated server provisioning and configuration using Ansible
+• Collaborated with development teams to optimize application performance
+
+Systems Administrator | TechStart Inc | June 2017 - January 2019
+• Administered Linux servers and maintained high availability systems
+• Implemented backup and recovery solutions ensuring 99.9% uptime
+• Managed network configuration and security policies
+• Created shell scripts for automated system maintenance tasks
+• Monitored system performance and resolved infrastructure issues
+
+EDUCATION
+Bachelor of Science in Information Technology
+Technical University | 2017
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Professional (2022)
+• Certified Kubernetes Administrator (CKA) (2021)  
+• HashiCorp Certified: Terraform Associate (2021)
+• Docker Certified Associate (2020)
+• Red Hat Certified System Administrator (2019)
+
+KEY ACHIEVEMENTS
+• Designed fault-tolerant architecture handling 10M+ daily requests
+• Reduced infrastructure costs by 40% through optimization and automation
+• Implemented zero-downtime deployment strategies
+• Built monitoring system detecting and alerting on 95% of issues before impact
+
+PROJECTS
+Multi-Cloud Migration: Led migration of legacy systems to hybrid cloud architecture
+Automated Testing Framework: Built comprehensive testing pipeline reducing bugs by 50%
+Container Orchestration: Implemented Kubernetes cluster management with auto-scaling
+Security Automation: Created automated security scanning and compliance reporting

@@ -1,0 +1,617 @@
+{
+  "test_results": [
+    {
+      "filename": "product_manager.txt",
+      "category": "Product Manager",
+      "tests": {
+        "years_experience": {
+          "expected": 9,
+          "actual": 9,
+          "passed": true
+        },
+        "programming_languages": {
+          "expected": [
+            "SQL"
+          ],
+          "actual": [
+            "HTML",
+            "HTML/CSS",
+            "SQL",
+            "CSS"
+          ],
+          "matches": 1,
+          "score": 1.0,
+          "passed": true
+        },
+        "tools_software": {
+          "expected": [
+            "Jira",
+            "Google Analytics",
+            "Tableau"
+          ],
+          "actual": [
+            "platform",
+            "PROFICIENCY",
+            "Innovation",
+            "Tools",
+            "Hotjar",
+            "Trello",
+            "Award",
+            "Confluence"
+          ],
+          "matches": 0,
+          "score": 0.0,
+          "passed": false
+        },
+        "total_skills": {
+          "expected_min": 8,
+          "actual": 184,
+          "passed": true
+        },
+        "soft_skills": {
+          "actual": [
+            "Problem Solving",
+            "Team Collaboration",
+            "Communication",
+            "Leadership",
+            "Project Management"
+          ],
+          "count": 5,
+          "passed": true
+        }
+      }
+    },
+    {
+      "filename": "ui_ux_designer.txt",
+      "category": "UI/UX Designer",
+      "tests": {
+        "years_experience": {
+          "expected": 5,
+          "actual": 5,
+          "passed": true
+        },
+        "programming_languages": {
+          "expected": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ],
+          "actual": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+          ],
+          "matches": 3,
+          "score": 1.0,
+          "passed": true
+        },
+        "frameworks_libraries": {
+          "expected": [
+            "React"
+          ],
+          "actual": [
+            "React"
+          ],
+          "matches": 1,
+          "score": 1.0,
+          "passed": true
+        },
+        "tools_software": {
+          "expected": [
+            "Figma",
+            "Sketch",
+            "Photoshop"
+          ],
+          "actual": [
+            "RECOGNITION",
+            "Media",
+            "SKILLS",
+            "Tool",
+            "Financial",
+            "Skills",
+            "Dashboard",
+            "Social",
+            "Adobe",
+            "professionals",
+            "Figma",
+            "Suite",
+            "XD",
+            "Systems",
+            "Healthcare",
+            "platform",
+            "Framer",
+            "system",
+            "Tools",
+            "Awards",
+            "Sketch",
+            "Photoshop",
+            "Platform",
+            "Illustrator",
+            "B2B",
+            "AWARDS",
+            "platforms",
+            "user-friendly",
+            "B2C"
+          ],
+          "matches": 3,
+          "score": 1.0,
+          "passed": true
+        },
+        "total_skills": {
+          "expected_min": 10,
+          "actual": 176,
+          "passed": true
+        },
+        "soft_skills": {
+          "actual": [
+            "Problem Solving",
+            "Communication",
+            "Adaptability",
+            "Project Management"
+          ],
+          "count": 4,
+          "passed": true
+        }
+      }
+    },
+    {
+      "filename": "software_developer.txt",
+      "category": "Software Developer",
+      "tests": {
+        "years_experience": {
+          "expected": 6,
+          "actual": 6,
+          "passed": true
+        },
+        "programming_languages": {
+          "expected": [
+            "JavaScript",
+            "Python",
+            "Java",
+            "TypeScript"
+          ],
+          "actual": [
+            "application",
+            "Angular",
+            "Proficient",
+            "Full",
+            "frameworks",
+            "applications",
+            "teams",
+            "TECHNICAL",
+            "Framework",
+            "CI",
+            "JavaScript",
+            "Programming",
+            "Stack",
+            "CSS3",
+            "stack",
+            "Vue.js",
+            "HTML5",
+            "languages",
+            "Frontend",
+            "development",
+            "Java",
+            "Sass",
+            "HTML",
+            "UI",
+            "web",
+            "web applications",
+            "full-stack",
+            "programming",
+            "TypeScript",
+            "React",
+            "CSS",
+            "scalable",
+            "Python"
+          ],
+          "matches": 4,
+          "score": 1.0,
+          "passed": true
+        },
+        "frameworks_libraries": {
+          "expected": [
+            "React",
+            "Django",
+            "Angular",
+            "Spring"
+          ],
+          "actual": [
+            "D3.js"
+          ],
+          "matches": 0,
+          "score": 0.0,
+          "passed": false
+        },
+        "tools_software": {
+          "expected": [
+            "Git",
+            "Docker",
+            "AWS",
+            "Jenkins"
+          ],
+          "actual": [
+            "MongoDB",
+            "IDEA",
+            "e-commerce",
+            "Cloud",
+            "project",
+            "Code",
+            "Git",
+            "AWS",
+            "Associate",
+            "PROJECTS",
+            "Jenkins",
+            "Kubernetes",
+            "E-Commerce",
+            "DevOps",
+            "management",
+            "Management",
+            "Studio",
+            "GitHub",
+            "Tools",
+            "Task",
+            "Platforms",
+            "CI/CD",
+            "MERN",
+            "Jira",
+            "Docker",
+            "Platform",
+            "IntelliJ",
+            "MySQL",
+            "Redis",
+            "Certified",
+            "tool",
+            "CD",
+            "Slack",
+            "github.com"
+          ],
+          "matches": 4,
+          "score": 1.0,
+          "passed": true
+        },
+        "total_skills": {
+          "expected_min": 15,
+          "actual": 150,
+          "passed": true
+        },
+        "soft_skills": {
+          "actual": [
+            "Problem Solving",
+            "Team Collaboration",
+            "Project Management"
+          ],
+          "count": 3,
+          "passed": true
+        }
+      }
+    },
+    {
+      "filename": "data_scientist.txt",
+      "category": "Data Scientist",
+      "tests": {
+        "years_experience": {
+          "expected": 8,
+          "actual": 8,
+          "passed": true
+        },
+        "programming_languages": {
+          "expected": [
+            "Python",
+            "R",
+            "SQL"
+          ],
+          "actual": [
+            "SQL",
+            "Java",
+            "Python"
+          ],
+          "matches": 2,
+          "score": 0.6666666666666666,
+          "passed": true
+        },
+        "frameworks_libraries": {
+          "expected": [
+            "TensorFlow",
+            "PyTorch",
+            "Scikit"
+          ],
+          "actual": [],
+          "matches": 0,
+          "score": 0.0,
+          "passed": false
+        },
+        "tools_software": {
+          "expected": [
+            "AWS",
+            "Tableau",
+            "Hadoop",
+            "Spark"
+          ],
+          "actual": [
+            "MongoDB",
+            "Cloud",
+            "Visualization",
+            "Power",
+            "EC2",
+            "Google",
+            "Hadoop",
+            "SageMaker",
+            "Plotly",
+            "AWS",
+            "Azure",
+            "Tableau",
+            "PostgreSQL",
+            "Platforms",
+            "Seaborn",
+            "Platform",
+            "cloud",
+            "Matplotlib",
+            "ML",
+            "Kafka",
+            "S3"
+          ],
+          "matches": 3,
+          "score": 0.75,
+          "passed": true
+        },
+        "total_skills": {
+          "expected_min": 20,
+          "actual": 164,
+          "passed": true
+        },
+        "soft_skills": {
+          "actual": [
+            "Team Collaboration"
+          ],
+          "count": 1,
+          "passed": true
+        }
+      }
+    },
+    {
+      "filename": "devops_engineer.txt",
+      "category": "DevOps Engineer",
+      "tests": {
+        "years_experience": {
+          "expected": 7,
+          "actual": 7,
+          "passed": true
+        },
+        "programming_languages": {
+          "expected": [
+            "Python",
+            "Bash"
+          ],
+          "actual": [
+            "scripts",
+            "Python"
+          ],
+          "matches": 1,
+          "score": 0.5,
+          "passed": true
+        },
+        "tools_software": {
+          "expected": [
+            "Docker",
+            "Kubernetes",
+            "AWS",
+            "Jenkins",
+            "Terraform",
+            "Ansible"
+          ],
+          "actual": [
+            "Google",
+            "Code",
+            "Swarm",
+            "TECHNICAL",
+            "Git",
+            "AWS",
+            "Jenkins",
+            "GitLab",
+            "Kubernetes",
+            "Azure",
+            "CircleCI",
+            "linux",
+            "Linux",
+            "OpenShift",
+            "Terraform",
+            "GitHub",
+            "Tools",
+            "Platforms",
+            "Go",
+            "Docker",
+            "Actions",
+            "Platform",
+            "Technical",
+            "Windows",
+            "Microsoft",
+            "github.com"
+          ],
+          "matches": 5,
+          "score": 0.8333333333333334,
+          "passed": true
+        },
+        "total_skills": {
+          "expected_min": 15,
+          "actual": 156,
+          "passed": true
+        },
+        "soft_skills": {
+          "actual": [],
+          "count": 0,
+          "passed": false
+        }
+      }
+    }
+  ],
+  "analytics": {
+    "programming_languages": {
+      "total_mentions": 45,
+      "unique_skills": 36,
+      "top_10": [
+        [
+          "HTML",
+          3
+        ],
+        [
+          "CSS",
+          3
+        ],
+        [
+          "Python",
+          3
+        ],
+        [
+          "SQL",
+          2
+        ],
+        [
+          "JavaScript",
+          2
+        ],
+        [
+          "Java",
+          2
+        ],
+        [
+          "HTML/CSS",
+          1
+        ],
+        [
+          "application",
+          1
+        ],
+        [
+          "Angular",
+          1
+        ],
+        [
+          "Proficient",
+          1
+        ]
+      ]
+    },
+    "frameworks_libraries": {
+      "total_mentions": 3,
+      "unique_skills": 3,
+      "top_10": [
+        [
+          "React",
+          1
+        ],
+        [
+          "D3.js",
+          1
+        ],
+        [
+          "Framework",
+          1
+        ]
+      ]
+    },
+    "tools_software": {
+      "total_mentions": 118,
+      "unique_skills": 96,
+      "top_10": [
+        [
+          "Tools",
+          4
+        ],
+        [
+          "Platform",
+          4
+        ],
+        [
+          "AWS",
+          3
+        ],
+        [
+          "Platforms",
+          3
+        ],
+        [
+          "platform",
+          2
+        ],
+        [
+          "MongoDB",
+          2
+        ],
+        [
+          "Cloud",
+          2
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Git",
+          2
+        ],
+        [
+          "Jenkins",
+          2
+        ]
+      ]
+    },
+    "databases": {
+      "total_mentions": 22,
+      "unique_skills": 22,
+      "top_10": [
+        [
+          "Database",
+          1
+        ],
+        [
+          "Core",
+          1
+        ],
+        [
+          "Express.js",
+          1
+        ],
+        [
+          "Backend",
+          1
+        ],
+        [
+          "PostgreSQL",
+          1
+        ],
+        [
+          ".NET",
+          1
+        ],
+        [
+          "data",
+          1
+        ],
+        [
+          "Django",
+          1
+        ],
+        [
+          "CodeBase",
+          1
+        ],
+        [
+          "backend",
+          1
+        ]
+      ]
+    }
+  },
+  "summary": {
+    "total_resumes": 5,
+    "total_skills_extracted": 830,
+    "categories_tested": [
+      "UI/UX Designer",
+      "Software Developer",
+      "Product Manager",
+      "DevOps Engineer",
+      "Data Scientist"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+SARAH MARTINEZ
+Senior Software Developer
+Email: sarah.martinez@email.com | Phone: (555) 123-4567
+LinkedIn: linkedin.com/in/sarahmart | GitHub: github.com/sarahdev
+
+PROFESSIONAL SUMMARY
+Experienced Software Developer with over 6 years of experience in full-stack web development. Proficient in modern programming languages and frameworks with a strong background in building scalable web applications. Excellent problem-solving skills and a collaborative team player with experience leading development teams.
+
+TECHNICAL SKILLS
+Programming Languages: JavaScript, Python, Java, TypeScript, C#
+Frontend: React, Vue.js, Angular, HTML5, CSS3, Sass, Bootstrap
+Backend: Node.js, Express.js, Django, Flask, Spring Boot, .NET Core  
+Databases: PostgreSQL, MySQL, MongoDB, Redis
+Cloud & DevOps: AWS, Docker, Kubernetes, Jenkins, Git, CI/CD
+Tools & Platforms: Visual Studio Code, IntelliJ IDEA, Jira, Slack
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Developer | TechCorp Solutions | March 2021 - Present
+• Developed and maintained 15+ web applications using React and Node.js
+• Led a team of 4 developers in implementing microservices architecture
+• Designed RESTful APIs serving over 100,000 daily active users  
+• Implemented automated testing reducing bug reports by 40%
+• Collaborated with UI/UX designers to create responsive user interfaces
+• Mentored junior developers and conducted code reviews
+
+Full Stack Developer | StartupXYZ | June 2019 - March 2021
+• Built scalable web applications using Django and React
+• Integrated third-party payment systems including Stripe and PayPal
+• Optimized database queries improving application performance by 35%
+• Deployed applications on AWS using Docker containers
+• Worked in agile development environment with 2-week sprints
+
+Junior Software Developer | CodeBase Inc | January 2018 - June 2019
+• Developed frontend components using HTML, CSS, and JavaScript
+• Collaborated on backend development using Java and Spring Framework
+• Participated in daily standups and sprint planning meetings
+• Fixed bugs and implemented new features based on user feedback
+
+EDUCATION
+Bachelor of Science in Computer Science
+State University | 2017
+
+CERTIFICATIONS
+• AWS Certified Developer Associate (2022)
+• React Developer Certification (2021)
+
+PROJECTS
+E-Commerce Platform: Built a full-stack e-commerce application using MERN stack
+Task Management System: Created a collaborative project management tool with real-time updates
+Weather Analytics Dashboard: Developed a data visualization dashboard using Python and D3.js

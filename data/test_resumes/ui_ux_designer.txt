@@ -1,0 +1,86 @@
+JESSICA WONG
+Senior UI/UX Designer
+Email: jessica.wong@designstudio.com | Phone: (555) 321-0987
+Portfolio: jessicawong.design | LinkedIn: linkedin.com/in/jessicawong-ux
+
+ABOUT ME
+Creative UI/UX Designer with over 5 years of experience creating user-centered digital experiences. Passionate about solving complex user problems through intuitive design and data-driven decisions. Strong background in user research, prototyping, and design systems with experience in both B2B and B2C products.
+
+DESIGN SKILLS
+Design Tools: Figma, Sketch, Adobe Creative Suite (Photoshop, Illustrator, XD)
+Prototyping: InVision, Framer, Principle, Adobe XD, Figma
+User Research: User Interviews, Surveys, Usability Testing, A/B Testing
+Analytics: Google Analytics, Hotjar, Mixpanel, Amplitude
+Front-end: HTML, CSS, JavaScript (basic), React (basic)
+Design Systems: Atomic Design, Component Libraries, Style Guides
+Methodologies: Design Thinking, Agile UX, Lean UX, Human-Centered Design
+
+PROFESSIONAL EXPERIENCE
+
+Senior UI/UX Designer | DesignTech Solutions | February 2021 - Present
+• Led design for mobile app with 2M+ downloads, increasing user engagement by 45%
+• Conducted user research including 50+ interviews and usability tests
+• Created comprehensive design system used across 8 product teams
+• Collaborated with product managers and developers in agile environment
+• Designed responsive web applications for both desktop and mobile platforms  
+• Mentored junior designers and established design review processes
+• Improved conversion rates by 30% through data-driven design iterations
+
+UX/UI Designer | StartupFlow | June 2019 - February 2021
+• Designed user interfaces for SaaS platform serving 10K+ business users
+• Created user personas and journey maps based on research findings
+• Built interactive prototypes for user testing and stakeholder presentations
+• Worked closely with development team to ensure design implementation accuracy
+• Conducted A/B tests resulting in 25% improvement in user onboarding completion
+• Developed accessibility guidelines ensuring WCAG 2.1 compliance
+
+Junior UX Designer | Creative Agency | March 2018 - June 2019
+• Designed websites and mobile apps for various client projects
+• Created wireframes, mockups, and user flow diagrams
+• Participated in client meetings and design presentations
+• Collaborated with front-end developers on implementation
+• Conducted competitive analysis and market research
+
+EDUCATION
+Bachelor of Fine Arts in Graphic Design
+Art Institute | 2018
+UX Design Bootcamp | General Assembly | 2017
+
+CERTIFICATIONS
+• Google UX Design Professional Certificate (2021)
+• Certified Usability Analyst (CUA) (2020)
+• Adobe Certified Expert - Photoshop (2019)
+
+SKILLS & COMPETENCIES
+Hard Skills:
+• User Interface Design
+• User Experience Design  
+• Information Architecture
+• Interaction Design
+• Visual Design
+• Responsive Design
+
+Soft Skills:
+• Creative Problem Solving
+• User Empathy
+• Communication Skills
+• Team Collaboration
+• Project Management
+• Critical Thinking
+• Attention to Detail
+
+NOTABLE PROJECTS
+E-commerce Mobile App: Redesigned shopping experience increasing conversions by 40%
+Healthcare Dashboard: Created intuitive interface for medical professionals
+Financial Planning Tool: Designed user-friendly interface for complex financial data
+Social Media Platform: Built design system for messaging and social features
+
+AWARDS & RECOGNITION
+• UX Design Awards - Best Mobile App Design (2022)
+• Dribbble Featured Designer (2021)
+• Awwwards Site of the Day - Team Project (2020)
+
+LANGUAGES
+English (Native)
+Mandarin (Conversational)
+Spanish (Basic)
