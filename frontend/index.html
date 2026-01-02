@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerBridge - Career Skill Gap Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #3d5a80 0%, #293241 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .card {
+        background: #f4f1de;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .input-section {
+        display: grid;
+        gap: 20px;
+      }
+
+      label {
+        font-weight: 600;
+        color: #293241;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 200px;
+        padding: 15px;
+        border: 2px solid #98c1d9;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        resize: vertical;
+        transition: border-color 0.3s;
+        background: white;
+      }
+
+      textarea:focus {
+        outline: none;
+        border-color: #3d5a80;
+        box-shadow: 0 0 0 3px rgba(152, 193, 217, 0.2);
+      }
+
+      select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #98c1d9;
+        border-radius: 8px;
+        font-size: 16px;
+        background: white;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        transition: border-color 0.3s;
+      }
+
+      select:focus {
+        outline: none;
+        border-color: #3d5a80;
+        box-shadow: 0 0 0 3px rgba(152, 193, 217, 0.2);
+      }
+
+      .analyze-btn {
+        width: 100%;
+        padding: 15px 30px;
+        background: linear-gradient(135deg, #ee6c4d 0%, #d64a2a 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .analyze-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(238, 108, 77, 0.5);
+      }
+
+      .analyze-btn:active {
+        transform: translateY(0);
+      }
+
+      .analyze-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .loading {
+        text-align: center;
+        padding: 40px;
+        display: none;
+      }
+
+      .spinner {
+        border: 4px solid #f4f1de;
+        border-top: 4px solid #ee6c4d;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .results {
+        display: none;
+      }
+
+      .match-score {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .score-circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #3d5a80 0%, #293241 100%);
+        box-shadow: 0 5px 20px rgba(61, 90, 128, 0.4);
+      }
+
+      .match-score h2 {
+        color: #293241;
+        margin-top: 10px;
+      }
+
+      .skills-section {
+        margin-top: 30px;
+      }
+
+      .skills-section h3 {
+        color: #293241;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #98c1d9;
+      }
+
+      .skill-category {
+        margin-bottom: 25px;
+      }
+
+      .skill-category h4 {
+        color: #3d5a80;
+        margin-bottom: 12px;
+        font-size: 1.1em;
+      }
+
+      .skill-item {
+        padding: 10px 15px;
+        margin-bottom: 8px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .skill-matched {
+        background: rgba(152, 193, 217, 0.2);
+        border-left: 4px solid #98c1d9;
+      }
+
+      .skill-missing {
+        background: rgba(238, 108, 77, 0.1);
+        border-left: 4px solid #ee6c4d;
+      }
+
+      .skill-name {
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .skill-percentage {
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      .recommendations {
+        margin-top: 40px;
+      }
+
+      .recommendation-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid #3d5a80;
+      }
+
+      .recommendation-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .skill-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #293241;
+        text-transform: uppercase;
+      }
+
+      .priority-badge {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+        color: white;
+      }
+
+      .priority-critical {
+        background: #ee6c4d;
+      }
+
+      .priority-high {
+        background: #ee6c4d;
+        opacity: 0.8;
+      }
+
+      .priority-medium {
+        background: #3d5a80;
+      }
+
+      .priority-low {
+        background: #98c1d9;
+      }
+
+      .resource-list {
+        margin-top: 10px;
+      }
+
+      .resource-item {
+        padding: 10px;
+        background: #f4f1de;
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+
+      .resource-item a {
+        color: #3d5a80;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .resource-item a:hover {
+        text-decoration: underline;
+      }
+
+      .platform {
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      .summary-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .stat-box {
+        background: linear-gradient(135deg, #3d5a80 0%, #293241 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        opacity: 0.9;
+        font-size: 0.9em;
+      }
+
+      .error {
+        background: rgba(238, 108, 77, 0.1);
+        color: #ee6c4d;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        display: none;
+        border: 2px solid #ee6c4d;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2em;
+        }
+
+        .card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>CareerBridge</h1>
+        <p>
+          Discover your skill gaps and get personalized learning recommendations
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="input-section">
+          <div>
+            <label for="resumeText">Paste Your Resume</label>
+            <textarea
+              id="resumeText"
+              placeholder="Paste your resume text here... Include your experience, skills, projects, and accomplishments."
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="targetRole">Select Your Target Role</label>
+            <select id="targetRole">
+              <option value="">Loading roles...</option>
+            </select>
+          </div>
+
+          <div class="error" id="errorMessage"></div>
+
+          <button class="analyze-btn" id="analyzeBtn" onclick="analyzeResume()">
+            Analyze My Skills
+          </button>
+        </div>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Analyzing your resume with AI...</p>
+      </div>
+
+      <div class="results" id="results">
+        <div class="card">
+          <div class="match-score">
+            <div class="score-circle" id="matchScore">0%</div>
+            <h2>Match Score</h2>
+            <p id="matchDescription"></p>
+          </div>
+
+          <div class="summary-stats" id="summaryStats"></div>
+        </div>
+
+        <div class="card skills-section">
+          <h3>Skills You Have</h3>
+          <div id="matchedSkills"></div>
+        </div>
+
+        <div class="card skills-section">
+          <h3>Skills to Learn</h3>
+          <div id="missingSkills"></div>
+        </div>
+
+        <div class="card recommendations">
+          <h3>Personalized Learning Path</h3>
+          <div id="learningRecommendations"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const API_URL = "http://localhost:8000";
+
+      // Load available roles on page load
+      async function loadRoles() {
+        try {
+          const response = await fetch(`${API_URL}/roles`);
+          const data = await response.json();
+
+          const select = document.getElementById("targetRole");
+          select.innerHTML = '<option value="">Select a role...</option>';
+
+          data.roles.forEach((role) => {
+            const option = document.createElement("option");
+            option.value = role.role;
+            option.textContent = `${role.role} (${role.professional_count} professionals)`;
+            select.appendChild(option);
+          });
+        } catch (error) {
+          console.error("Error loading roles:", error);
+          document.getElementById("targetRole").innerHTML =
+            '<option value="">Error loading roles</option>';
+        }
+      }
+
+      // Analyze resume
+      async function analyzeResume() {
+        const resumeText = document.getElementById("resumeText").value.trim();
+        const targetRole = document.getElementById("targetRole").value;
+        const errorDiv = document.getElementById("errorMessage");
+
+        // Validation
+        errorDiv.style.display = "none";
+
+        if (!resumeText) {
+          showError("Please paste your resume text");
+          return;
+        }
+
+        if (resumeText.length < 50) {
+          showError("Resume text is too short. Please provide more details.");
+          return;
+        }
+
+        if (!targetRole) {
+          showError("Please select a target role");
+          return;
+        }
+
+        // Show loading
+        document.getElementById("loading").style.display = "block";
+        document.getElementById("results").style.display = "none";
+        document.getElementById("analyzeBtn").disabled = true;
+
+        try {
+          const response = await fetch(`${API_URL}/analyze`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              resume_text: resumeText,
+              target_role: targetRole,
+              min_frequency: 3,
+            }),
+          });
+
+          if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.detail || "Analysis failed");
+          }
+
+          const data = await response.json();
+          displayResults(data);
+        } catch (error) {
+          console.error("Error:", error);
+          showError(
+            error.message || "Failed to analyze resume. Please try again."
+          );
+        } finally {
+          document.getElementById("loading").style.display = "none";
+          document.getElementById("analyzeBtn").disabled = false;
+        }
+      }
+
+      function showError(message) {
+        const errorDiv = document.getElementById("errorMessage");
+        errorDiv.textContent = message;
+        errorDiv.style.display = "block";
+      }
+
+      function displayResults(data) {
+        // Show results section
+        document.getElementById("results").style.display = "block";
+        document
+          .getElementById("results")
+          .scrollIntoView({ behavior: "smooth" });
+
+        // Display match score
+        const matchScore = Math.round(data.match_percentage);
+        document.getElementById("matchScore").textContent = `${matchScore}%`;
+        document.getElementById(
+          "matchDescription"
+        ).textContent = `You match ${matchScore}% with ${data.role} professionals`;
+
+        // Display summary stats
+        const summaryStats = document.getElementById("summaryStats");
+        summaryStats.innerHTML = `
+                <div class="stat-box">
+                    <div class="stat-number">${data.summary.total_matched}</div>
+                    <div class="stat-label">Skills Matched</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">${data.summary.total_missing}</div>
+                    <div class="stat-label">Skills to Learn</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">${data.role_metadata.total_professionals}</div>
+                    <div class="stat-label">Professionals Analyzed</div>
+                </div>
+            `;
+
+        // Display matched skills
+        displaySkills(data.matched_skills, "matchedSkills", true);
+
+        // Display missing skills
+        displaySkills(data.missing_skills, "missingSkills", false);
+
+        // Display learning recommendations
+        displayRecommendations(data.learning_recommendations);
+      }
+
+      function displaySkills(skillsData, elementId, isMatched) {
+        const container = document.getElementById(elementId);
+        container.innerHTML = "";
+
+        const categories = [
+          "programming_languages",
+          "frameworks_libraries",
+          "tools_software",
+          "databases",
+          "soft_skills",
+        ];
+
+        categories.forEach((category) => {
+          const skills = skillsData[category];
+          if (skills && skills.length > 0) {
+            const categoryDiv = document.createElement("div");
+            categoryDiv.className = "skill-category";
+
+            const title = document.createElement("h4");
+            title.textContent = category
+              .replace(/_/g, " ")
+              .replace(/\b\w/g, (l) => l.toUpperCase());
+            categoryDiv.appendChild(title);
+
+            skills.forEach((skill) => {
+              const skillDiv = document.createElement("div");
+              skillDiv.className = `skill-item ${
+                isMatched ? "skill-matched" : "skill-missing"
+              }`;
+
+              const skillName = document.createElement("span");
+              skillName.className = "skill-name";
+              skillName.textContent = skill.skill;
+
+              const skillPercentage = document.createElement("span");
+              skillPercentage.className = "skill-percentage";
+              if (skill.percentage !== undefined) {
+                skillPercentage.textContent = `${skill.percentage}% of professionals have this`;
+              }
+
+              skillDiv.appendChild(skillName);
+              skillDiv.appendChild(skillPercentage);
+              categoryDiv.appendChild(skillDiv);
+            });
+
+            container.appendChild(categoryDiv);
+          }
+        });
+
+        if (container.innerHTML === "") {
+          container.innerHTML =
+            '<p style="color: #666;">No skills in this category</p>';
+        }
+      }
+
+      function displayRecommendations(recommendations) {
+        const container = document.getElementById("learningRecommendations");
+        container.innerHTML = "";
+
+        if (!recommendations || recommendations.length === 0) {
+          container.innerHTML =
+            '<p style="color: #666;">Great! You have all the common skills for this role!</p>';
+          return;
+        }
+
+        recommendations.slice(0, 10).forEach((rec) => {
+          const card = document.createElement("div");
+          card.className = "recommendation-card";
+
+          const header = document.createElement("div");
+          header.className = "recommendation-header";
+
+          const title = document.createElement("div");
+          title.className = "skill-title";
+          title.textContent = rec.skill;
+
+          const badge = document.createElement("span");
+          badge.className = `priority-badge priority-${rec.importance}`;
+          badge.textContent = `${rec.importance.toUpperCase()} PRIORITY`;
+
+          header.appendChild(title);
+          header.appendChild(badge);
+          card.appendChild(header);
+
+          const percentage = document.createElement("p");
+          percentage.textContent = `${rec.possessed_by_percentage}% of professionals have this skill`;
+          percentage.style.marginBottom = "15px";
+          percentage.style.color = "#666";
+          card.appendChild(percentage);
+
+          if (rec.resources && rec.resources.length > 0) {
+            const resourceList = document.createElement("div");
+            resourceList.className = "resource-list";
+
+            rec.resources.forEach((resource) => {
+              const resourceItem = document.createElement("div");
+              resourceItem.className = "resource-item";
+              resourceItem.innerHTML = `
+                            <div class="platform">${resource.platform}</div>
+                            <a href="${resource.url}" target="_blank">${resource.course} →</a>
+                        `;
+              resourceList.appendChild(resourceItem);
+            });
+
+            card.appendChild(resourceList);
+          }
+
+          container.appendChild(card);
+        });
+      }
+
+      // Load roles when page loads
+      loadRoles();
+    </script>
+  </body>
+</html>
