@@ -1,21 +1,36 @@
-# SkillSight
+# CareerBridge
 
-SkillSight is a career insight platform that helps users plan their career growth. Once users indicate which roles they are interested in, it compares the user's resume to the skills required for those roles and recommends jobs, online courses, and other next steps to help them close the gap.
-
-The goal is to provide personalized, data-driven guidance to help users confidently progress toward their career goals.
+CareerBridge is an AI-powered career development platform that analyzes your resume against real-world professionals in your target role. Simply
+paste your resume and select your desired job title to discover which skills you already have and which ones you need to learn. The platform
+compares your skillset against a database of 400+ parsed resumes from various tech roles, providing personalized learning recommendations with
+curated resources from top platforms like Udemy, Coursera, and YouTube.
 
 ## 🚀 Tech Stack
 
-- **Backend:** Python, FastAPI, SQLite, SQLAlchemy
-- **Frontend:** React.js, HTML, CSS
+- **Backend:** Python 3.10+, FastAPI, SQLite
+- **Frontend:** Vanilla JavaScript, HTML5, CSS3
+- **NLP & Data Processing**: NLTK, scikit-learn, TextBlob
+- **Design**: Montserrat font, custom color palette
+- **Data**: 400+ professionally parsed resumes across multiple tech roles
 
 
-## 📦 Python Version Notes
+## How to Run 
 
-Python 3.10.13 to ensure compatibility with core libraries and our backend modules.
+### Start the Backend
+  cd backend
+  python3 main.py
+  The API will be available at http://localhost:8000
 
-Later on, if we build LLM-based features (e.g. chatbots, PDF parsing with LlamaIndex), we may use Python 3.11+ in a separate environment or feature branch to support those tools.
+### Start the Frontend
 
-This keeps our base system stable while giving us flexibility for future expansion.
+  cd frontend
+  python3 -m http.server 3000
+  Open http://localhost:3000 in your browser
+
+  Features
+
+  Hybrid skill extraction using section parsing, dictionary matching, and NLP Real-world skill gap analysis based on actual professionals📊
+  Match percentage and detailed skill breakdowns by category. Curated learning resources for missing skills. Modern, responsive UI with
+  professional design
 
 
