@@ -19,7 +19,7 @@ try:
     HAS_NLTK = True
 except ImportError:
     HAS_NLTK = False
-    print("⚠️  NLTK not available - using basic text processing")
+    print("  NLTK not available - using basic text processing")
 
 try:
     from sklearn.feature_extraction.text import TfidfVectorizer
@@ -29,20 +29,20 @@ try:
     HAS_SKLEARN = True
 except ImportError:
     HAS_SKLEARN = False
-    print("⚠️  scikit-learn not available - using basic feature extraction")
+    print("scikit-learn not available - using basic feature extraction")
 
 try:
     from textblob import TextBlob
     HAS_TEXTBLOB = True
 except ImportError:
     HAS_TEXTBLOB = False
-    print("⚠️  TextBlob not available - using basic sentiment analysis")
+    print("TextBlob not available - using basic sentiment analysis")
 
 class NLPResumeParser:
     """NLP-based resume parser using NLTK, scikit-learn, and TextBlob"""
     
     def __init__(self):
-        print("🚀 Initializing NLP Resume Parser (no spaCy)")
+        print("Initializing Resume Parser")
         
         # Download required NLTK data
         if HAS_NLTK:
@@ -547,7 +547,7 @@ class NLPResumeParser:
         df['Category'] = df['Category'].str.strip()
         df['Resume'] = df['Resume'].str.strip()
         
-        print(f"🔄 Processing {len(df)} resumes with NLP techniques...")
+        print(f" Processing {len(df)} resumes with NLP techniques...")
         
         parsed_resumes = []
         for idx, row in df.iterrows():
@@ -557,7 +557,7 @@ class NLPResumeParser:
             parsed = self.parse_single_resume(row['Resume'], row['Category'], idx + 1)
             parsed_resumes.append(parsed)
         
-        print(f"✅ Completed parsing {len(parsed_resumes)} resumes!")
+        print(f"Completed parsing {len(parsed_resumes)} resumes!")
         
         tables = self.create_normalized_tables(parsed_resumes)
         return parsed_resumes, tables
@@ -660,7 +660,7 @@ class NLPResumeParser:
         
         conn.commit()
         conn.close()
-        print(f"💾 Database created successfully: {db_file}")
+        print(f" Database created successfully: {db_file}")
 
     def generate_skill_analytics(self, tables: Dict) -> Dict:
         """Generate analytics on extracted skills"""
@@ -803,7 +803,7 @@ class NLPResumeParser:
 
 def main():
     """Main function"""
-    print("🚀 NLP RESUME PARSER (No spaCy)")
+    print(" NLP RESUME PARSER ")
     print("Using: NLTK, scikit-learn, TextBlob")
     print("=" * 50)
     
@@ -815,14 +815,14 @@ def main():
         analytics = parser.generate_skill_analytics(tables)
         
         print("\n" + "="*60)
-        print("🎉 NLP RESUME PARSING COMPLETE")
+        print(" NLP RESUME PARSING COMPLETE")
         print("="*60)
         
-        print(f"\n📊 Summary:")
+        print(f"\n Summary:")
         print(f"   Processed: {len(parsed_resumes)} resumes")
         print(f"   Database: nlp_resume_data.db")
         
-        print(f"\n🏆 Discovered Skills (via NLP):")
+        print(f"\n Discovered Skills (via NLP):")
         for skill_type, stats in analytics.items():
             print(f"\n   {skill_type.replace('_', ' ').title()}:")
             print(f"     Total mentions: {stats['total_mentions']}")
@@ -883,9 +883,9 @@ def main():
         
         conn.close()
         
-        print(f"\n✅ NLP parsing completed successfully!")
-        print(f"💡 Skills were discovered using NLP techniques, not hardcoded lists!")
-        print(f"🔬 Techniques used: Named Entity Recognition, POS Tagging, TF-IDF, Context Analysis")
+        print(f"\n NLP parsing completed successfully!")
+        print(f"Skills were discovered using NLP techniques, not hardcoded lists!")
+        print(f" Techniques used: Named Entity Recognition, POS Tagging, TF-IDF, Context Analysis")
         
         # Show some interesting statistics
         print(f"\n📈 Interesting Statistics:")
@@ -902,17 +902,17 @@ def main():
             print(f"   Average years of experience: {sum(years_data) / len(years_data):.1f}")
             print(f"   Experience range: {min(years_data)} - {max(years_data)} years")
         
-        print(f"\n🎯 Database ready for queries! Try:")
+        print(f"\n Database ready for queries! Try:")
         print(f"   - Find developers with specific skills")
         print(f"   - Analyze skill trends by category")
         print(f"   - Identify skill combinations")
         print(f"   - Experience level analysis")
         
     except Exception as e:
-        print(f"❌ Error during parsing: {e}")
+        print(f" Error during parsing: {e}")
         import traceback
         traceback.print_exc()
-        print(f"\n💡 Common solutions:")
+        print(f"\n Common solutions:")
         print(f"   - Install missing packages: pip install nltk scikit-learn textblob")
         print(f"   - Download NLTK data: python -c \"import nltk; nltk.download('all')\"")
         print(f"   - Check if csdataset.csv exists in current directory")
